@@ -14,7 +14,7 @@ public class FileDownload {
 	/**@param httpUrl 下载连接
 	 * @param saveFile 本地保存目录
 	 * */
-	public boolean httpDownload(String httpUrl,String saveFile){  
+	public boolean DownloadFile(String httpUrl,String saveFile){  
 	       int bytesum = 0;  
 	       int byteread = 0;  
 	       URL url = null;  
@@ -46,6 +46,6 @@ public class FileDownload {
 	       }  
 	   }  
 	public static void main(String[] args) {
-		new FileDownload().httpDownload("https://www.dropbox.com/sh/lw0ljk3sllmimpz/AAC-n6LmtWbdlKQRbdEa0QUoa/imouto.host.7z?dl=1", "a.7z");
+		new FileDownload().DownloadFile("https://www.dropbox.com/sh/lw0ljk3sllmimpz/AAC-n6LmtWbdlKQRbdEa0QUoa/imouto.host.7z?dl=1", "a.7z");
 	}
 }

@@ -13,16 +13,19 @@ public class SaveFileInformation {
 		if(!checkFileDateExist()){
 			try {
 				file.createNewFile();
-				out=new BufferedWriter(new FileWriter(file));
-				
-				
 				
 			} catch (IOException e) {
 				System.out.println("Create File Error!");
 //				e.printStackTrace();
 			}
 		}
+		try {
+			out=new BufferedWriter(new FileWriter(file));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
+	/**将信息写到文件里*/
 	void pushContent(String data){
 		try {
 			out.write(data);

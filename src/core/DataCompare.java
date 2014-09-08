@@ -5,7 +5,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-/**比较获取的网页的数据和文件中保存的数据对比*/
+/**比较获取的网页的数据和文件中保存的数据对比，如果不同（即便有错误），
+ * 则认为是更新的，重新写文件信息到文件，并下载*/
 public class DataCompare {
 	File file=new File("FileDate");
 	BufferedReader in;
