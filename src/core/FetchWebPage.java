@@ -64,6 +64,5 @@ public class FetchWebPage {
 	public static void main(String[] args) {
 		FetchWebPage aa=new FetchWebPage();
 		System.out.println(aa.getFileTimeLabel(aa.getPageContent("https://www.dropbox.com/sh/lw0ljk3sllmimpz/AAC-n6LmtWbdlKQRbdEa0QUoa/imouto.host.7z")));
-//		System.out.println(new FetchWebPage().getPageContent("https://www.dropbox.com/sh/lw0ljk3sllmimpz/AAC-n6LmtWbdlKQRbdEa0QUoa/imouto.host.7z"));
 	}
 }
