@@ -11,6 +11,9 @@ import java.net.URLConnection;
  * 文件下载类
  * */
 public class FileDownload {
+	/**@param httpUrl 下载连接
+	 * @param saveFile 本地保存目录
+	 * */
 	public boolean httpDownload(String httpUrl,String saveFile){  
 	       int bytesum = 0;  
 	       int byteread = 0;  

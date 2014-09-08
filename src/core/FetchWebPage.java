@@ -60,9 +60,5 @@ public class FetchWebPage {
 		int rightBracket=content.indexOf('>');
 		return content.substring(rightBracket+1, andPosition);
 	}
-	//test
-	public static void main(String[] args) {
-		FetchWebPage aa=new FetchWebPage();
-		System.out.println(aa.getFileTimeLabel(aa.getPageContent("https://www.dropbox.com/sh/lw0ljk3sllmimpz/AAC-n6LmtWbdlKQRbdEa0QUoa/imouto.host.7z")));
-	}
+
 }
