@@ -15,8 +15,16 @@ public class DataCompare {
 			in=new BufferedReader(new FileReader(file));
 			//根据数据不同，来写循环，这里只有一行数据
 			String temp=in.readLine();
-			if(temp!=null)
-				return temp.equals(compareData);
+			System.out.println(temp);
+			while(temp!=null){
+				if(temp.equals(compareData)){
+					in.close();
+					return true;
+				}
+				temp=in.readLine();
+			}
+			in.close();
+			System.out.println(temp);
 			return false;
 		} catch (FileNotFoundException e) {
 			System.out.println("File not exist");

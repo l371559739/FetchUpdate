@@ -10,6 +10,7 @@ public class Main {
 	DataCompare dataCompare;
 	FileDownload filedown;
 	
+	UnZip unzip;
 	String timeinformation;
 	public Main() {
 		savefileinformation=new SaveFileInformation();
@@ -19,7 +20,8 @@ public class Main {
 			savefileinformation.pushContent(timeinformation);
 			filedown=new FileDownload();
 			filedown.DownloadFile(DOWNLOADLINK, SAVEFILEPATH);
-			
+			unzip=new UnZip();
+			unzip.extractile("a.7z");
 		}else{
 			System.out.println("File doesn't need updating");
 		}

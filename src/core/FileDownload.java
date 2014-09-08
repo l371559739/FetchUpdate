@@ -45,7 +45,4 @@ public class FileDownload {
 	           return false;  
 	       }  
 	   }  
-	public static void main(String[] args) {
-		new FileDownload().DownloadFile("https://www.dropbox.com/sh/lw0ljk3sllmimpz/AAC-n6LmtWbdlKQRbdEa0QUoa/imouto.host.7z?dl=1", "a.7z");
-	}
 }
