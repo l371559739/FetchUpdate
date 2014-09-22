@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="libs/sevenzipjbinding-AllPlatforms.jar"/>
 	<classpathentry kind="lib" path="libs/sevenzipjbinding.jar"/>
+	<classpathentry kind="lib" path="libs/commons-net-3.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
