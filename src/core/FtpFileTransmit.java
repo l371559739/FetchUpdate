@@ -2,6 +2,7 @@ package core;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.SocketException;
 
@@ -27,8 +28,7 @@ public class FtpFileTransmit {
 		try {
 			ftp.connect(addr, port);
 			ftp.login(username, password);
-			ftp.setFileType(FTPClient.BINARY_FILE_TYPE);      
-	        reply = ftp.getReplyCode();      
+	        reply = ftp.getReplyCode();    
 	        if (!FTPReply.isPositiveCompletion(reply)) {      
 	            ftp.disconnect();      
 	            return result;      
@@ -48,28 +48,18 @@ public class FtpFileTransmit {
      * @param file 上传的文件或文件夹  
      * @throws Exception  
      */    
-    protected void upload(File file) throws Exception{      
-        if(file.isDirectory()){           
-            ftp.makeDirectory(file.getName());                
-            ftp.changeWorkingDirectory(file.getName());      
-            String[] files = file.list();             
-            for (int i = 0; i < files.length; i++) {      
-                File file1 = new File(file.getPath()+"\\"+files[i] );      
-                if(file1.isDirectory()){      
-                    upload(file1);      
-                    ftp.changeToParentDirectory();      
-                }else{                    
-                    File file2 = new File(file.getPath()+"\\"+files[i]);      
-                    FileInputStream input = new FileInputStream(file2);      
-                    ftp.storeFile(file2.getName(), input);      
-                    input.close();                            
-                }                 
-            }      
-        }else{      
-            File file2 = new File(file.getPath());      
-            FileInputStream input = new FileInputStream(file2);      
-            ftp.storeFile(file2.getName(), input);      
-            input.close();        
+    protected void upload(File file) {          
+        	System.out.println("file");
+            FileInputStream input;
+			try {
+				input = new FileInputStream(file);
+				ftp.storeFile(file.getName(), input);      
+				input.close();        
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}      
         }      
-    }      
+//    }      
 }
