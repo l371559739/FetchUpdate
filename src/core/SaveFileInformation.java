@@ -19,16 +19,14 @@ public class SaveFileInformation {
 //				e.printStackTrace();
 			}
 		}
-		try {
-			out=new BufferedWriter(new FileWriter(file));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
 	}
 	/**将信息写到文件里*/
 	void pushContent(String data){
 		try {
+			out=new BufferedWriter(new FileWriter(file));
 			out.write(data);
+			System.out.println("Writing file success.");
 		} catch (IOException e) {
 			System.out.println("Writing file error.");
 			e.printStackTrace();

@@ -47,7 +47,8 @@ public class UnZip {
 	                            FileOutputStream fos;
 	                            try {
 	                                File file = new File(item.getPath());
-	                                file.getParentFile().mkdirs();
+	                                //error occours below
+//	                                file.getParentFile().mkdirs();
 	                                fos = new FileOutputStream(file);
 	                                fos.write(data);
 	                                fos.close();
@@ -75,6 +76,7 @@ public class UnZip {
 	            }
 	        } catch (Exception e) {
 	            System.err.println("Error occurs: " + e);
+	            e.printStackTrace();
 	            System.exit(1);
 	        } finally {
 	            if (inArchive != null) {

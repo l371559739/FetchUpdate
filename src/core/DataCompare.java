@@ -12,10 +12,9 @@ public class DataCompare {
 	BufferedReader in;
 	public boolean Compare(String compareData) {
 		try {
-			in=new BufferedReader(new FileReader(file));
+			in=new BufferedReader(new FileReader(new File("FileDate")));
 			//根据数据不同，来写循环，这里只有一行数据
 			String temp=in.readLine();
-			System.out.println(temp);
 			while(temp!=null){
 				if(temp.equals(compareData)){
 					in.close();
@@ -24,7 +23,6 @@ public class DataCompare {
 				temp=in.readLine();
 			}
 			in.close();
-			System.out.println(temp);
 			return false;
 		} catch (FileNotFoundException e) {
 			System.out.println("File not exist");
