@@ -3,10 +3,13 @@ package core;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.SocketException;
 
 import org.apache.commons.net.ftp.FTPClient;
+import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;
 
 public class FtpFileTransmit {
@@ -60,6 +63,29 @@ public class FtpFileTransmit {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}      
-        }      
-//    }      
+    }
+    /**文件下载类
+     * @param downloadPath 远程文件夹目录路径
+     * @param fileName 要下载的文件名字
+     * */
+    protected void download(String downloadPath,String fileName){
+    	try {
+			ftp.changeWorkingDirectory(downloadPath);
+			FTPFile[] files=ftp.listFiles();
+			for(FTPFile file:files){
+				if(file.getName().equals(fileName)){
+					System.out.println("Downloading "+fileName);
+					File localfile=new File(fileName);
+					OutputStream out=new FileOutputStream(localfile);
+					ftp.retrieveFile(fileName, out);
+					out.close();
+				}
+			}
+			
+			
+		} catch (IOException e) {
+			System.out.println("Error in downloadfile from ftp");
+//			e.printStackTrace();
+		}
+    }
 }
