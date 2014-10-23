@@ -10,6 +10,7 @@ import java.io.IOException;
 
 /**对文本文件的内容处理*/
 public class TextProcess {
+	String UpdateTimeMark;
 	BufferedReader in;
 	BufferedWriter out;
 	public TextProcess(File file) {
@@ -31,7 +32,10 @@ public class TextProcess {
 					if(temp.indexOf("tongji")<0){
 						out.write(temp+"\n");
 						if(temp.equals("#  imouto.host")){
-							out.write("#  本文件由Find收集并做简单的修改，欢迎访问博客www.findspace.name\n\n#一下google+的连接是源作者的连接\n");
+							out.write("#  本文件由Find收集并做简单的修改，欢迎访问博客www.findspace.name\n\n#  以下google+的链接是源作者的链接\n");
+						}
+						if(temp.indexOf("#+UPDATE_TIME")>=0){
+							UpdateTimeMark=temp;
 						}
 					}					
 				}
@@ -46,6 +50,10 @@ public class TextProcess {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	/**返回hosts更新的时间*/
+	public String getUpdateTime(){
+		return UpdateTimeMark;
 	}
 //	public static void main(String[] args) {
 //		new TextProcess(new File("imouto.host.txt"));
