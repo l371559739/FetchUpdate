@@ -19,23 +19,28 @@ public class TextProcess {
 			out=new BufferedWriter(new FileWriter(new File("hosts")));
 			String temp=in.readLine();
 			boolean logStart=false;
+			boolean commemtsStart=false;
 			while(temp!=null){
 				if(logStart){
 					if(temp.indexOf("#+MESSAGE_END")>=0){
 						logStart=false;
+						commemtsStart=false;
 					}
 				}
+				
 				if(temp.indexOf("Fix & Bug :")>=0){
 					logStart=true;
 				}
 				if(!logStart){
 					if(temp.indexOf("tongji")<0){
-						out.write(temp+"\n");
+						if(!commemtsStart)out.write(temp+"\n");
 						if(temp.equals("#  imouto.host")){
-							out.write("#  本文件由Find收集并做简单的修改，欢迎访问博客www.findspace.name\n\n#  以下google+的链接是源作者的链接\n");
+							out.write("# --- Welcome to www.findspace.name ----#\n#\n#   My Google+:https://plus.google.com/u/0/+HaoYueMing/posts#\n#\n#\n#   This hosts follows with imouto,but it is updated by a spider whose author is Find.  \n# This hosts' author is imouto.Here is his google+ Homepage:https://plus.google.com/u/0/100484131192950935968/about#\n#    here is the community page :https://plus.google.com/u/0/communities/111265655058678013030");
+							commemtsStart=true;
 						}
 						if(temp.indexOf("#+UPDATE_TIME")>=0){
 							UpdateTimeMark=temp;
+							
 						}
 					}					
 				}

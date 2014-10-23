@@ -13,8 +13,12 @@ public class Main {
 	private final String SAVEFILEPATH = "test.txt";
 	private final String FTPPATH = "/domains/findspace.name/public_html/adds";
 	private final int PORT = 21;
+	//测试时，将下面三个填写你的信息即可
+	//这里是ftp的ip地址
 	private final String ADDR = "";
+	//ftp用户名
 	private final String USERNAME = "";
+	//ftp密码
 	private final String PASSWORD = "";
 	private final static int TIMESLEEP=3600*1000;
 	FetchWebPage fetch;
@@ -22,7 +26,6 @@ public class Main {
 	DataCompare dataCompare;
 	FileDownload filedown;
 
-	UnZip unzip;
 	String timeinformation;
 	FtpFileTransmit ftp;
 	TextProcess textProcess;

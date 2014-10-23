@@ -4,19 +4,8 @@
 #######################################################################
 #
 #  imouto.host
-#  本文件由Find收集并做简单的修改，欢迎访问博客www.findspace.name
-
-#  以下google+的链接是源作者的链接
-#
-#  主页：https://plus.google.com/100484131192950935968/about
-#  社群：https://plus.google.com/communities/111265655058678013030
-#  GitHub：https://github.com/zxdrive/imouto.host
-#  部署hosts文件前请注意文本编码和换行符格式，请勿直接对文件进行覆盖。
-#  错误报告前请尝试更新到最新版本，不接受老版本的错误报告。
-#
-#  #Ver : 2.22.0519 Asata Shino
-#  #Update Time : 2014.10.23;14:39
-#+MESSAGE_END
+#  Welcome to www.findspace.name
+#  now is the test time for my tool .so no more information from imouto.hosts#+MESSAGE_END
 
 #localhost START
 127.0.0.1	localhost

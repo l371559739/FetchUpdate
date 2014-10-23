@@ -52,7 +52,6 @@ public class FtpFileTransmit {
      * @throws Exception  
      */    
     protected void upload(File file) {          
-        	System.out.println("file");
             FileInputStream input;
 			try {
 				input = new FileInputStream(file);
