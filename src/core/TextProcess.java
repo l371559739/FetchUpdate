@@ -31,7 +31,7 @@ public class TextProcess {
 					if(temp.indexOf("tongji")<0){
 						out.write(temp+"\n");
 						if(temp.equals("#  imouto.host")){
-							out.write("#  本文件由Find收集并做简单的修改，欢迎访问博客www.findspace.name\n");
+							out.write("#  本文件由Find收集并做简单的修改，欢迎访问博客www.findspace.name\n\n#一下google+的连接是源作者的连接\n");
 						}
 					}					
 				}
