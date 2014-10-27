@@ -35,7 +35,12 @@ public class TextProcess {
 					if(temp.indexOf("tongji")<0){
 						if(!commemtsStart)out.write(temp+"\n");
 						if(temp.equals("#  imouto.host")){
-							out.write("# --- Welcome to www.findspace.name ----#\n#\n#   My Google+:https://plus.google.com/u/0/+HaoYueMing/posts#\n#\n#\n#   This hosts follows with imouto,but it is updated by a spider whose author is Find.  \n# This hosts' author is imouto.Here is his google+ Homepage:https://plus.google.com/u/0/100484131192950935968/about#\n#    here is the community page :https://plus.google.com/u/0/communities/111265655058678013030");
+							out.write("# --- Welcome to www.findspace.name ----\n#\n");
+//							out.write("# My Google+:https://plus.google.com/u/0/+HaoYueMing/posts#\n#\n#");
+//							out.write("\n#   This hosts follows with imouto,\n#   but it is updated by a Find'spider.");
+//							out.write("\n#   This hosts' author is imouto.Here is his google+ Homepage:");
+//							out.write("\n#   https://plus.google.com/u/0/100484131192950935968/about\n");
+//							out.write("\n#    here is the community page :https://plus.google.com/u/0/communities/111265655058678013030");
 							commemtsStart=true;
 						}
 						if(temp.indexOf("#+UPDATE_TIME")>=0){
