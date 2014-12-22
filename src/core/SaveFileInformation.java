@@ -13,7 +13,6 @@ public class SaveFileInformation {
 		if(!checkFileDateExist()){
 			try {
 				file.createNewFile();
-				
 			} catch (IOException e) {
 				System.out.println("Create File Error!");
 //				e.printStackTrace();

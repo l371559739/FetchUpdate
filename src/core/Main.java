@@ -5,19 +5,29 @@ import java.io.File;
 import com.sun.jmx.snmp.Timestamp;
 
 public class Main {
-
-	private final String DESTURL = "https://www.dropbox.com/sh/lw0ljk3sllmimpz/AAC-n6LmtWbdlKQRbdEa0QUoa/imouto.host.7z";
-	// private final String DOWNLOADLINK =
-	// "https://www.dropbox.com/sh/lw0ljk3sllmimpz/AAC-n6LmtWbdlKQRbdEa0QUoa/imouto.host.7z?dl=1";
-	private final String DOWNLOADLINK = "https://raw.githubusercontent.com/zxdrive/imouto.host/master/imouto.host.txt";
-
+	//更新了一个新的hosts地址
+	private final String DOWNLOADLINK = "https://raw.githubusercontent.com/Elegantid/Hosts/master/hosts";
+	/**抓取到以后在本地存储的文件名*/
 	private final String SAVEFILEPATH = "test.txt";
-	private final String FTPPATH = "/domains/findspace.name/public_html/adds";
+	/**要追加文件的文件名*/
+	private final String OTHERHOSTS="other.hosts";
+	/**上传文件的ftp路径地址*/
+	private final String FTPPATH = "";
+	/**ftp端口*/
 	private final int PORT = 21;
+	/**ftp的ip地址*/
 	private final String ADDR = "";
+	/**ftp的用户名*/
 	private final String USERNAME = "";
+	/**ftp的密码*/
 	private final String PASSWORD = "";
-	private final static int TIMESLEEP = 3600 * 1000;
+	/**邮箱用户名*/
+	private final String userName="";
+	/**邮箱密码*/
+	private final String userKey="";
+
+	/**要发送的目的邮箱*/
+	private final String destMailAdress="findxiaoxun@163.com";
 	FetchWebPage fetch;
 	SaveFileInformation savefileinformation;
 	DataCompare dataCompare;
@@ -26,7 +36,6 @@ public class Main {
 	String timeinformation;
 	FtpFileTransmit ftp;
 	TextProcess textProcess;
-
 	public Main() {
 		//下载文档
 		filedown = new FileDownload();
@@ -34,14 +43,15 @@ public class Main {
 		System.out.println("FileDownLoad OK");
 		//对下载的文档进行处理
 		textProcess = new TextProcess(new File(SAVEFILEPATH));
+		textProcess.pushOtherHosts(OTHERHOSTS);
 		//获取在文档处理过程中保存的更新信息
 		timeinformation = textProcess.getUpdateTime();
 		//把获取的更新信息保存到本地
 		savefileinformation = new SaveFileInformation();
-		System.out.println(timeinformation);
+//		System.out.println(timeinformation);
 		dataCompare = new DataCompare();
 		// 比较获取到的时间戳和保存在本地的时间戳
-//		if (!dataCompare.Compare(timeinformation)) {
+		if (!dataCompare.Compare(timeinformation)) {
 			savefileinformation.pushContent(timeinformation);
 			System.out.println("--------updating----------");
 			ftp = new FtpFileTransmit();
@@ -53,11 +63,11 @@ public class Main {
 				}
 			}
 			//如果有更新，且更新成功了，发送邮件
-			new SendMail(timeinformation);
+			new SendMail(timeinformation,userName,userKey,destMailAdress);
 			System.out.println("-----Update Successfully------");
-//		} else {
-//			System.out.println("File doesn't need updating");
-//		}
+		} else {
+			System.out.println("File doesn't need updating");
+		}
 	}
 
 	public static void main(String[] args) {
