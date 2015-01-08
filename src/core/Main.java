@@ -12,7 +12,7 @@ public class Main {
 	/**要追加文件的文件名*/
 	private final String OTHERHOSTS="other.hosts";
 	/**上传文件的ftp路径地址*/
-	private final String FTPPATH = "/domains//public_html/adds";
+	private final String FTPPATH = "/domains/findspace.name/public_html/adds";
 	/**ftp端口*/
 	private final int PORT = 21;
 	/**ftp的ip地址*/
@@ -27,12 +27,9 @@ public class Main {
 	private final String userKey="";
 	/**要发送的目的邮箱*/
 	private final String destMailAdress="@163.com";
-	FetchWebPage fetch;
-	SaveFileInformation savefileinformation;
 	FileDownload filedown;
 
 	FtpFileTransmit ftp;
-//	TextProcess textProcess;
 	TextProcessForWebPage textProcess;
 	UpdateTimeCheck updatetimecheck;
 	public Main() {
