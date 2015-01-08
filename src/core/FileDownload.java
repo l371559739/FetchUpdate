@@ -45,4 +45,10 @@ public class FileDownload {
 	           return false;  
 	       }  
 	   }  
+//	public static void main(String[] args) {
+//		FileDownload filedown;
+//		filedown = new FileDownload();
+//		filedown.DownloadFile(Main.DOWNLOADLINK, Main.SAVEFILEPATH);
+//		System.out.println("FileDownLoad OK");
+//	}
 }
