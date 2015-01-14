@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="shortcut icon" href="/r/i/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/r/m.css" type="text/css"/>
+<title>facebook hosts 2015，持续更新 - 360知识库</title>
+<meta content="facebook hosts 2015，持续更新,360知识库" name="keywords" />
+<meta content="facebook hosts 2015，持续更新" name="description" />
+<link href="/s/l/editor/plugins/code/prettify.css" rel="stylesheet" />
+<script src="/s/l/editor/plugins/code/prettify.js"></script>
+</head>
+<body id="home"><div id="overhead"><h1><a href="/" title="" id="logo"></a></h1><div class="fleft"></div><div class="fright"><a href="/login" class="noborder">登录</a><a href="/signup">注册</a></div></div>
+<table id="m_table">
+   <tbody>
+   <tr>
+      <td id="m_browse" valign="top">
+         <div id="content">
+            <div id="threadbox">
+               <div class="navpath"><div class="ml10"><a href="/" title="360知识库">360知识库</a> / <a href="/explore/troubleshoot" title="">故障排除</a>  / facebook hosts 2015，持续更新</div></div>
+               <div style="margin-top:5px;">
+                  <ul>
+                     <li style="border:1px solid #bbb;float:left;margin-left:8px;padding-left:5px;padding-right:5px;border-bottom:0px;height:30px;line-height:30px;border-radius:2px 2px 0px 0px;"><h1>facebook hosts 2015，持续更新</h1></li>
+                     <li style="float:right;"></li>
+                  </ul>
+                  
+                  <ul style="clear:both;height:30px;line-height:30px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background-color:#f1f1f1;">
+                     <li style="float:left;"><img src="/s/u/avatar/hezi.png" style="width:16px;height:16px;padding:1px;border:1px solid #999;margin:5px 5px 0px 5px;border-radius:1px;"></a></li>
+                     <li style="float:left;">盒子 整理发布</li>
+                     <li style="float:right;padding-right:5px;"><b>阅读:</b> 0  <b>奖励:</b>￥0 元</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="t90"><script type="text/javascript">google_ad_client = "ca-pub-5121995024841266";google_ad_slot = "6930507414";google_ad_width = 728;google_ad_height = 90;</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+            <div id="storybox"><div class="v_story"><p>
+	有些网站有时候还是要上一下，证明新闻说的网站确实存在，所以顺便提供了facebook hosts的更新。
+</p>
+<p>
+	<strong>注：</strong>惯例需要使用https访问。本文只提供facebook hosts，其他请访问：<a href="http://www.360kb.com/kb/2_122.html" target="_blank">google hosts</a>。
+</p>
+<p>
+	<span style="line-height:25px;background-color:#F9F9F9;">====更新分界线，复制下面内容到hosts文件即可=====</span> 
+</p>
+<p>
+	#facebook hosts 2015
+</p>
+<p>
+	<span>173.252.120.9&nbsp;facebook.com</span><br />
+<span>173.252.120.9 www.facebook.com</span> 
+</p>
+<p>
+	<span>
+	<p>
+		185.60.216.7&nbsp;touch.facebook.com<br />
+185.60.216.7&nbsp;apps.facebook.com
+	</p>
+	<p>
+		185.60.216.7&nbsp;upload.facebook.com
+	</p>
+<span>185.60.216.7&nbsp;secure.facebook.com</span><br />
+<span>185.60.216.7&nbsp;zh-cn.facebook.com</span><br />
+<span>185.60.216.7&nbsp;login.facebook.com</span><br />
+<span>185.60.216.7&nbsp;m.facebook.com</span></span>
+</p>
+<p>
+	<span><span><span>185.60.216.7&nbsp;graph.facebook.com</span><br />
+<span>185.60.216.7&nbsp;ssl.facebook.com</span><br />
+<span>185.60.216.7&nbsp;api.facebook.com</span><br />
+</span></span>
+</p>
+<p>
+	<span></span>185.60.216.7&nbsp;attachments.facebook.com<span>
+	<p>
+		185.60.216.7&nbsp;developers.facebook.com
+	</p>
+<br />
+</span>
+</p>
+<p>
+	<span><span>184.28.188.154</span><span>&nbsp;</span><span> </span>s-static.ak.facebook.com</span><br />
+<span><span>184.28.188.154</span><span>&nbsp;</span><span> </span>profile.ak.facebook.com</span><br />
+<span>184.28.188.154<span> </span>static.ak.facebook.com</span><br />
+<span>184.28.188.154<span> </span>b.static.ak.facebook.com</span><br />
+	<p>
+		<br />
+	</p>
+</p>
+<p>
+	<span style="line-height:22px;"><span>184.28.188.153&nbsp;act.channel.facebook.com</span><br />
+<span>184.28.188.153&nbsp;0-act.channel.facebook.com</span><br />
+<span>184.28.188.153&nbsp;1-act.channel.facebook.com</span><br />
+<span>184.28.188.153&nbsp;2-act.channel.facebook.com</span><br />
+<span>184.28.188.153&nbsp;3-act.channel.facebook.com</span><br />
+<span>184.28.188.153&nbsp;4-act.channel.facebook.com</span><br />
+<span>184.28.188.153&nbsp;5-act.channel.facebook.com</span><br />
+<span>184.28.188.153&nbsp;6-act.channel.facebook.com</span><br />
+<span>69.171.246.7&nbsp;beta-chat-01-05-ash3.facebook.com</span><br />
+</span> <span><br />
+</span>
+</p>
+<p>
+	<span><span>173.252.120.6</span><span>&nbsp;</span><span>fbcdn.net</span><br />
+</span>
+</p>
+<p>
+	<span>165.254.42.232<span> </span>profile.ak.fbcdn.net</span><br />
+<span>184.28.188.240<span> </span>vthumb.ak.fbcdn.net</span><br />
+<span>184.28.188.152<span> </span>photos-a.ak.fbcdn.net</span><br />
+<span>184.28.188.154<span> </span>photos-b.ak.fbcdn.net</span><br />
+<span>184.28.188.171<span> </span>photos-c.ak.fbcdn.net</span><br />
+<span>184.28.188.171<span> </span>photos-d.ak.fbcdn.net</span><br />
+<span>184.28.188.153<span> </span>photos-e.ak.fbcdn.net</span><br />
+<span>184.28.188.153<span> </span>photos-f.ak.fbcdn.net</span><br />
+<span>184.28.188.171<span> </span>photos-g.ak.fbcdn.net</span><br />
+<span>184.28.188.146<span> </span>photos-h.ak.fbcdn.net</span><br />
+<span>184.28.188.171<span> </span>creative.ak.fbcdn.net</span><br />
+<span>184.28.188.153<span> </span>external.ak.fbcdn.net</span><br />
+<span>184.28.188.153<span> </span>b.static.ak.fbcdn.net</span><br />
+<span>184.28.188.153<span> </span>static.ak.fbcdn.net</span><br />
+<br />
+#facebook hosts 2015 end
+</p></div></div>
+            <div class="s_tool" style="padding-left:10px;padding-top:5px;height:30px;line-height:30px;border-top:1px solid #ccc;"><div class="bdlikebutton"></div></div>
+         </div>
+      </td>
+      <td id="m_sidebar">
+         <div class="s250"><script type="text/javascript">google_ad_client="ca-pub-5121995024841266";google_ad_slot="1013399356";google_ad_width=250;google_ad_height=250;</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+         <div class="mbox"><div class="title">标签</div></div>
+         <div class="mbox">
+            <div class="title">提问题</div>
+            <ul class="list">
+               <li><a rel="nofollow" href="http://www.zhihu.com/" target="_blank">知乎</a></li>
+               <li><a rel="nofollow" href="http://zhidao.baidu.com" target="_blank">百度知道</a></li>
+               <li><a rel="nofollow" href="http://wenwen.soso.com" target="_blank">搜搜问问</a></li>
+               <li><a rel="nofollow" href="http://wenda.tianya.cn/" target="_blank">天涯问答</a></li>
+               <li><a rel="nofollow" href="http://stackexchange.com/" target="_blank">Stack Exchange</a></li>
+            </ul>
+         </div>
+      </td>
+   </tr>
+   </tbody>
+</table>
+<div id="footer"><div class="fleft"><tt class="ft">© 2012</tt> <a href="http://www.360kb.com" title="360知识库，知识管理和学习平台">360知识库</a></div><div class="fright"> [京ICP备09100230号] [公安网备110108008126号]</div></div>
+<div class="hide"><script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F90e95eff9abf29a99ae15d7491b27315' type='text/javascript'%3E%3C/script%3E"));</script></div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="/s/j/s.js"></script>
+<script type="text/javascript" id="bdlike_shell"></script>
+<script type="text/javascript">var bdShare_config = { "type": "small", "color": "orange", "uid": "664627", "share": "yes" };document.getElementById("bdlike_shell").src = "http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + new Date().getHours();</script>
+</body></html>
+

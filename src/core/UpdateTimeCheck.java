@@ -21,7 +21,7 @@ public class UpdateTimeCheck {
 	BufferedReader in;
 	public UpdateTimeCheck() {
 		try {
-			in=new BufferedReader(new FileReader(new File(Main.SAVEFILEPATH)));
+			in=new BufferedReader(new FileReader(new File(Main.SAVEFILES[0])));
 			String line;
 			while((line=in.readLine())!=null){
 				if(line.contains(TIMEMARK)){

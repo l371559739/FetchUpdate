@@ -5,17 +5,17 @@ import java.io.File;
 import com.sun.jmx.snmp.Timestamp;
 
 public class Main {
-	//更新了一个新的hosts地址
-	static final String DOWNLOADLINK = "http://www.360kb.com/kb/2_122.html";
-	/**抓取到以后在本地存储的文件名*/
-	static final String SAVEFILEPATH = "test.txt";
+
 	/**要追加文件的文件名*/
 	private final String OTHERHOSTS="other.hosts";
 	/**上传文件的ftp路径地址*/
-	private final String FTPPATH = "/domains/findspace.name/public_html/adds";
+	private final String FTPPATH = "/wwwroot/adds";
 	/**ftp端口*/
 	private final int PORT = 21;
-	/**ftp的ip地址*/
+	
+
+	
+	
 	private final String ADDR = "";
 	/**ftp的用户名*/
 	private final String USERNAME = "";
@@ -28,20 +28,27 @@ public class Main {
 	/**要发送的目的邮箱*/
 	private final String destMailAdress="@163.com";
 	FileDownload filedown;
-
 	FtpFileTransmit ftp;
 	TextProcessForWebPage textProcess;
 	UpdateTimeCheck updatetimecheck;
+	/**hosts源地址<br>0:google<br>1:facebook<br>2:关键字*/
+	public static final String[]HOSTSLIB={"http://www.360kb.com/kb/2_122.html","http://www.360kb.com/kb/2_139.html","https://raw.githubusercontent.com/vokins/simpleu/master/hosts"};
+	public static final String[]SAVEFILES={"googlecookie","facebookcookie","keywordscookied"};
 	public Main() {
 		//下载文档
 		filedown = new FileDownload();
-		filedown.DownloadFile(DOWNLOADLINK, SAVEFILEPATH);
+		for(int i=0;i<HOSTSLIB.length;i++){
+			filedown.DownloadFile(HOSTSLIB[i], SAVEFILES[i]);
+		}
 		System.out.println("FileDownLoad OK");
 		//对下载的文档进行处理
 		updatetimecheck=new UpdateTimeCheck();
 		if(updatetimecheck.needUpdate()){
 			System.out.println("--------updating----------");
-			textProcess=new TextProcessForWebPage(SAVEFILEPATH);
+			textProcess=new TextProcessForWebPage();
+			textProcess.ProcessText(Main.SAVEFILES[0], 0);
+			textProcess.ProcessText(Main.SAVEFILES[1], 1);
+			textProcess.ProcessViaKeywords(Main.SAVEFILES[2]);
 			PushOtherHosts.pushOtherHosts(OTHERHOSTS);
 			System.out.println("Change local hosts successfully.");
 			ftp = new FtpFileTransmit();
