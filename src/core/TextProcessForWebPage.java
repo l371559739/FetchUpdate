@@ -22,7 +22,7 @@ public class TextProcessForWebPage {
 	public TextProcessForWebPage() {
 		try {
 			out=new BufferedWriter(new FileWriter(new File("hosts")));
-			out.write("#+BEGIN\n#+UPDATE_TIME "+UpdateTimeCheck.DETAILTIME+"\n#+MESSAGE\n#######################################################################\n#\n# --- Welcome to www.findspace.name ----\n# Connect Me:   SinaWeibo: @FindBlog\n#\n#######################################################################\n#+MESSAGE_END\n\n\n#Google service\n");
+			out.write("#+BEGIN\n#+UPDATE_TIME "+UpdateTimeCheck.DETAILTIME+"\n#+MESSAGE\n#######################################################################\n#\n# --- Welcome to www.findspace.name ----\n# Connect Me:   Website:http://www.findspace.name\n#\n#######################################################################\n#+MESSAGE_END\n\n\n#Google service\n");
 			out.flush();
 			out.close();
 		} catch (IOException e) {
@@ -34,7 +34,7 @@ public class TextProcessForWebPage {
 	 *			index:<br>0 ：google <br>1：facebook 
 	 * */
 	public void ProcessText(String path,int index) {
-		Pattern regex=Pattern.compile(".*(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}).*");
+		Pattern regex=Pattern.compile("(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})");
 		Matcher regexMatcher;
 		try {
 			in=new BufferedReader(new FileReader(new File(path)));
@@ -47,7 +47,9 @@ public class TextProcessForWebPage {
 				if(startContext){
 					regexMatcher=regex.matcher(line);
 					if(regexMatcher.find()){
-						writeline=regexMatcher.group();
+//						writeline=regexMatcher.group(0);
+						writeline=line;
+//						System.out.println(writeline);
 						if(writeline!=null){
 							writeline=writeline.replace("	", "");
 							writeline=writeline.replace("&nbsp;"," "); 
@@ -58,6 +60,7 @@ public class TextProcessForWebPage {
 								writeline=writeline.substring(writeline.indexOf('>')+1);
 							}
 						}
+//						System.out.println(writeline);
 						out.write(writeline+"\n");
 					}
 				}
@@ -68,6 +71,28 @@ public class TextProcessForWebPage {
 			in.close();
 				
 		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public void ProcessVidGithub(String path){
+		try {
+			in=new BufferedReader(new FileReader(new File(path)));
+			out=new BufferedWriter(new FileWriter(new File("hosts"),true));
+			boolean startMark=false;
+			while((line=in.readLine())!=null){
+				if(line.contains("#redirect")){startMark=true;}
+				else if(startMark&&(line.contains("@Mobile ADPlatform")||line.contains("127.0.0.1")))startMark=false;
+				if(startMark)out.write(line+"\n");
+			}
+			out.write("#FindSpace Hosts End\n");
+			out.flush();
+			out.close();
+			in.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -91,11 +116,11 @@ public class TextProcessForWebPage {
 			e.printStackTrace();
 		}
 	}
-//	public static void main(String[] args) {
-//		TextProcessForWebPage tt=new TextProcessForWebPage();
-//		tt.ProcessText(Main.SAVEFILES[0],0);
-//		tt.ProcessText(Main.SAVEFILES[1],1);
-//		tt.ProcessViaKeywords(Main.SAVEFILES[2]);
-////		new UpdateTimeCheck().getLocalTime();
-//	}
+	public static void main(String[] args) {
+		TextProcessForWebPage tt=new TextProcessForWebPage();
+		tt.ProcessText(Main.SAVEFILES[0],0);
+		tt.ProcessText(Main.SAVEFILES[1],1);
+		tt.ProcessViaKeywords(Main.SAVEFILES[2]);
+//		new UpdateTimeCheck().getLocalTime();
+	}
 }

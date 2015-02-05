@@ -13,6 +13,7 @@ public class Main {
 	/**ftp端口*/
 	private final int PORT = 21;
 	
+	
 
 	
 	
@@ -47,12 +48,14 @@ public class Main {
 			System.out.println("--------updating----------");
 			textProcess=new TextProcessForWebPage();
 			textProcess.ProcessText(Main.SAVEFILES[0], 0);
+//			textProcess.ProcessVidGithub(Main.SAVEFILES[2]);
 			textProcess.ProcessText(Main.SAVEFILES[1], 1);
 			textProcess.ProcessViaKeywords(Main.SAVEFILES[2]);
-			PushOtherHosts.pushOtherHosts(OTHERHOSTS);
+//			PushOtherHosts.pushOtherHosts(OTHERHOSTS);
 			System.out.println("Change local hosts successfully.");
 			ftp = new FtpFileTransmit();
 			if (ftp.connect(FTPPATH, ADDR, PORT, USERNAME, PASSWORD)) {
+				System.out.println("Ftp connect successful.");
 				try {
 					ftp.upload(new File("hosts"));
 				} catch (Exception e) {

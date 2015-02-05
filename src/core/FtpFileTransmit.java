@@ -55,7 +55,8 @@ public class FtpFileTransmit {
             FileInputStream input;
 			try {
 				input = new FileInputStream(file);
-				ftp.storeFile(file.getName(), input);      
+				System.out.println("Ftp upload:");
+				System.out.println(ftp.storeFile(file.getName(), input));      
 				input.close();        
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();

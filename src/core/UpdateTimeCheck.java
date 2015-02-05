@@ -10,9 +10,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 //暂时先按天更新
 public class UpdateTimeCheck {
-	static final String TIMEMARK="<strong>google hosts";
+	static final String TIMEMARK="google hosts 2015.";
 	static final String TIMEMARKLOCAL="#+UPDATE_TIME";
-	Pattern timeregex=Pattern.compile("<strong>.*</strong><strong>(.*)&nbsp;</strong>.*");
+	Pattern timeregex=Pattern.compile(".*(\\d{4,4}.\\d{1,2}.\\d{1,2}).*");
 	Matcher regexMatcher;
 	String updatetime;
 	static String remotetime;
@@ -35,8 +35,18 @@ public class UpdateTimeCheck {
 					}
 				}
 			}
+			System.out.println("Remotetime:  "+remotetime);
+			
+//			while((line=in.readLine())!=null){
+//				if(line.contains(";version")){
+//					remotetime=line.substring(line.indexOf('=')+1);
+//					DETAILTIME=remotetime.substring(0,4)+"-"+remotetime.substring(4,6)+"-"+remotetime.substring(6,8)+" "+remotetime.substring(8,10)+":"+remotetime.substring(10,12)+":00";
+//					remotetime=DETAILTIME.substring(0,DETAILTIME.indexOf(' '));
+//					System.out.println(remotetime+"  "+DETAILTIME);
+//				}
+//			}
 			in.close();
-			getLocalTime();
+			System.out.println("LocalTime: "+getLocalTime());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

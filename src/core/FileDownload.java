@@ -48,7 +48,7 @@ public class FileDownload {
 	public static void main(String[] args) {
 		FileDownload filedown;
 		filedown = new FileDownload();
-		filedown.DownloadFile(Main.HOSTSLIB[2], Main.SAVEFILES[2]);
+		filedown.DownloadFile("http://tieba.baidu.com/p/3533898537", "test");
 		System.out.println("FileDownLoad OK");
 	}
 }
