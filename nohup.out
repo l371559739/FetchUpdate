@@ -1,0 +1,5 @@
+INFO: loading config from /etc/shadowsocks.json
+2015-02-05 12:12:37 INFO     loading libcrypto from libcrypto.so.1.0.0
+2015-02-05 12:12:37 INFO     starting local at 127.0.0.1:1080
+2015-02-05 12:12:37 ERROR    [Errno 98] Address already in use
+shadowsocks 2.6.7

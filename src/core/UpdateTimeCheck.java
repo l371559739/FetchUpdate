@@ -82,6 +82,6 @@ public class UpdateTimeCheck {
 	}
 	private void setDetailTime(){
 		Calendar c=Calendar.getInstance();
-		DETAILTIME=remotetime+" "+(c.get(Calendar.HOUR)+12)+":"+c.get(Calendar.MINUTE)+":00";
+		DETAILTIME=remotetime+" "+(c.get(Calendar.HOUR))+":"+c.get(Calendar.MINUTE)+":00";
 	}
 }
